@@ -11,7 +11,7 @@ public class VendedorMixtoTest {
 	@Test
 	public void validarCalcularSueldoVendedorMixto() {
 		// Arrange
-		VendedorMixto vendedor = new VendedorMixto("1723456789");
+		VendedorMixto vendedor = new VendedorMixto("1723456789", "M");
 		vendedor.setSueldoFijo(500.0);
 		vendedor.setNumeroVentas(4);
 		
@@ -20,11 +20,5 @@ public class VendedorMixtoTest {
 		
 		// Assert
 		assertEquals(520.0, sueldoCalculado, 0.001);
-	}
-
-	
-	private void assertEquals(double d, double sueldoCalculado, double e) {
-		// TODO Auto-generated method stub
-		
 	}
 }

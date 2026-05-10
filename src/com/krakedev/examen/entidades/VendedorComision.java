@@ -1,19 +1,31 @@
 package com.krakedev.examen.entidades;
 
-public class VendedorComision extends Vendedor {
+public class VendedorComision {
 
-	public VendedorComision(String cedula, String tipo) {
-		super(cedula, tipo);
-	}
+    private String cedula;
+    private String tipo;
+    private int numeroVentas;
+    private double comisionPorVenta;
 
-	@Override
-	public double calcularSueldo() {
-		return getComisionPorVenta() * getNumeroVentas();
-	}
+    public VendedorComision(String cedula, String tipo) {
+        this.cedula = cedula;
+        this.tipo = tipo;
+    }
 
-	@Override
-	public String toString() {
-		return "VendedorComision [cedula=" + getCedula() + ", tipo=" + getTipo() + ", numeroVentas=" + getNumeroVentas()
-				+ ", sueldoFijo=" + getSueldoFijo() + ", comisionPorVenta=" + getComisionPorVenta() + "]";
+    public void setNumeroVentas(int numeroVentas) {
+        this.numeroVentas = numeroVentas;
+    }
+
+    public void setComisionPorVenta(double comisionPorVenta) {
+        this.comisionPorVenta = comisionPorVenta;
+    }
+
+    public double calcularSueldo() {
+        return numeroVentas * comisionPorVenta;
+    }
+
+	public void setSueldoFijo(double d) {
+		// TODO Auto-generated method stub
+		
 	}
 }

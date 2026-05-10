@@ -3,6 +3,7 @@ package com.krakedev.examen.services;
 import java.util.ArrayList;
 
 import com.krakedev.examen.entidades.Vendedor;
+import com.krakedev.examen.entidades.VendedorComision;
 
 public class AdminVentas {
 	private ArrayList<Vendedor> vendedores;
@@ -30,5 +31,10 @@ public class AdminVentas {
 			}
 		}
 		return null;
+	}
+
+	public void agregar(VendedorComision vendedorComision) {
+		// TODO Auto-generated method stub
+		
 	}
 }
